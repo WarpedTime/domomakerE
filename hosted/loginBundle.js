@@ -130,8 +130,16 @@ var getToken = function getToken() {
 
 $(document).ready(function () {
   getToken();
+  changeTheme(color);
+  connectButtons();
 });
 'use strict';
+
+var color = 'blue';
+
+var changeTheme = function changeTheme(color) {
+  document.querySelector('body').classList = color;
+};
 
 var handleError = function handleError(message) {
   $('#errorMessage').text(message);
@@ -156,4 +164,22 @@ var sendAjax = function sendAjax(type, action, data, success) {
       handleError(messageObj.error);
     }
   });
+};
+
+var connectButtons = function connectButtons() {
+  document.querySelector('#red').onclick = function () {
+    color = 'red';changeTheme(color);
+  };
+  document.querySelector('#blue').onclick = function () {
+    color = 'blue';changeTheme(color);
+  };
+  document.querySelector('#green').onclick = function () {
+    color = 'green';changeTheme(color);
+  };
+  document.querySelector('#orange').onclick = function () {
+    color = 'orange';changeTheme(color);
+  };
+  document.querySelector('#purple').onclick = function () {
+    color = 'purple';changeTheme(color);
+  };
 };
