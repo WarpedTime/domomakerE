@@ -27,13 +27,7 @@ const sendAjax = (type, action, data, success) => {
       handleError(messageObj.error);
     }
   });
-  changeTheme(color);
 };
-
-const colors = {
-  blue: [ '#55acee', '#66bdff', '#338acc' ],
-  red: [ '#ff2a2a', '#ff5252', '#de0000' ],
-}
 
 const connectButtons = () => {
   document.querySelector('#red').onclick = () => {

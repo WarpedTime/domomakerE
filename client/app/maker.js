@@ -1,10 +1,9 @@
-
 const handleDomo = (e) => {
   e.preventDefault();
   
   $('#domoMessage').animate({width:'hide'},350);
   
-  if($('#domoName').val() == '' || $('#domoAge').val() == ''){
+  if($('#domoName').val() == '' || $('#domoAge').val() == '' || $('#domoFood').val() == ''){
     handleError("RAWR! All fields are required.");
     return false;
   }
@@ -25,7 +24,6 @@ const DomoForm = (props) => {
       method='POST'
       className='domoForm'
       >
-
       <label htmlFor='name'>Name: </label>
       <input id='domoName' type='text' name='name' placeholder='Domo Name' />
       <label htmlFor='age'>Age: </label>
@@ -58,8 +56,6 @@ const DomoList = function(props) {
       </div>
     );
   });
-  
-  console.dir(props.domos);
   
   return (
     <div className='domoList'>
