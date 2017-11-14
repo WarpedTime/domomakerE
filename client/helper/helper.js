@@ -1,3 +1,9 @@
+let color = 'blue';
+
+const changeTheme = (color) =>{
+  document.querySelector('body').classList = color;
+};
+
 const handleError = (message) => {
   $('#errorMessage').text(message);
   $('#domoMessage').animate({width:'toggle'}, 350);
@@ -21,4 +27,28 @@ const sendAjax = (type, action, data, success) => {
       handleError(messageObj.error);
     }
   });
+  changeTheme(color);
+};
+
+const colors = {
+  blue: [ '#55acee', '#66bdff', '#338acc' ],
+  red: [ '#ff2a2a', '#ff5252', '#de0000' ],
+}
+
+const connectButtons = () => {
+  document.querySelector('#red').onclick = () => {
+    color = 'red'; changeTheme(color);
+  };
+  document.querySelector('#blue').onclick = () => {
+    color = 'blue'; changeTheme(color);
+  };
+  document.querySelector('#green').onclick = () => {
+    color = 'green'; changeTheme(color);
+  };
+  document.querySelector('#orange').onclick = () => {
+    color = 'orange'; changeTheme(color);
+  };
+  document.querySelector('#purple').onclick = () => {
+    color = 'purple'; changeTheme(color);
+  };
 };

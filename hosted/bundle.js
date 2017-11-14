@@ -39,6 +39,12 @@ var DomoForm = function DomoForm(props) {
       'Age: '
     ),
     React.createElement('input', { id: 'domoAge', type: 'text', name: 'age', placeholder: 'Domo Age' }),
+    React.createElement(
+      'label',
+      { htmlFor: 'food' },
+      'Fav Food: '
+    ),
+    React.createElement('input', { id: 'domoFood', type: 'text', name: 'food', placeholder: 'Favorite Food' }),
     React.createElement('input', { type: 'hidden', name: '_csrf', value: props.csrf }),
     React.createElement('input', { classsName: 'makeDomoSubmit', type: 'submit', value: 'Make Domo' })
   );
@@ -73,9 +79,17 @@ var DomoList = function DomoList(props) {
         { className: 'domoAge' },
         'Age: ',
         domo.age
+      ),
+      React.createElement(
+        'h3',
+        { className: 'domoFood' },
+        'Favorite Food: ',
+        domo.food
       )
     );
   });
+
+  console.dir(props.domos);
 
   return React.createElement(
     'div',
@@ -106,8 +120,16 @@ var getToken = function getToken() {
 
 $(document).ready(function () {
   getToken();
+  changeTheme(color);
+  connectButtons();
 });
 'use strict';
+
+var color = 'blue';
+
+var changeTheme = function changeTheme(color) {
+  document.querySelector('body').classList = color;
+};
 
 var handleError = function handleError(message) {
   $('#errorMessage').text(message);
@@ -132,4 +154,28 @@ var sendAjax = function sendAjax(type, action, data, success) {
       handleError(messageObj.error);
     }
   });
+  changeTheme(color);
+};
+
+var colors = {
+  blue: ['#55acee', '#66bdff', '#338acc'],
+  red: ['#ff2a2a', '#ff5252', '#de0000']
+};
+
+var connectButtons = function connectButtons() {
+  document.querySelector('#red').onclick = function () {
+    color = 'red';changeTheme(color);
+  };
+  document.querySelector('#blue').onclick = function () {
+    color = 'blue';changeTheme(color);
+  };
+  document.querySelector('#green').onclick = function () {
+    color = 'green';changeTheme(color);
+  };
+  document.querySelector('#orange').onclick = function () {
+    color = 'orange';changeTheme(color);
+  };
+  document.querySelector('#purple').onclick = function () {
+    color = 'purple';changeTheme(color);
+  };
 };

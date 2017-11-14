@@ -38,7 +38,7 @@ nav:nth-child(1) {
     text-decoration: none;
     padding: 5px;
     border-radius: 4px;
-    background-color: #55acee;
+    background-color: inherit;
     transition: background-color 0.4s ease;
 }
 
@@ -50,7 +50,7 @@ nav:nth-child(1) {
 .domoForm {
     border: 2px solid #338acc;
     height: 35px;
-    width: 700px;
+    width: 710px;
     margin-top:0px;
     padding-top:10px;
     background-color: #55acee;
@@ -60,8 +60,9 @@ nav:nth-child(1) {
 
 .domoForm label {
     display: inline-block;
-    width: 75px;
-    margin-left: 10px;
+    //width: 50px;
+    margin-left: 15px;
+    margin-right: 10px;
     font-size: 1.2em;
     float: left;
     color: white;
@@ -73,7 +74,7 @@ nav:nth-child(1) {
 
 .makeDomoSubmit {
     transition: background-color 0.4s ease;
-    display: inline;
+    display: inline-block;
     width: 90px;
     background-color: #55acee;
     border-radius: 2px;
@@ -195,6 +196,8 @@ nav:nth-child(1) {
     border: 2px solid #55acee;
     border-radius: 4px;
     margin: 0 auto;
+    padding: 0.5em;
+    padding-right: 0.7em;
     margin-top: 100px;
 }
 
@@ -237,20 +240,38 @@ h3.emptyDomo {
 }
 
 h3.domoName {
-    float:left;
-    width: 200px;
+    display: inline-block;
+    text-align: left;
     font-weight: bold;
     padding-left: 65px;
     font-size: 1.5em;
 }
 
+h3.domoFood {
+  display: inline-block;
+    font-weight: bold;
+    padding-right: 0.2em;
+    font-size: 1.5em;
+}
+
 h3.domoAge {
+    display: block;
     float:right;
     text-align: left;
-    width: 100px;
     font-weight: bold;
     padding-right: 40px;
     font-size: 1.5em;
+}
+
+#domoName {
+  width: 10em;
+}
+#domoAge {
+  width: 6em;
+}
+#domoFood{
+  width: 10em;
+  margin-right: 1.2em;
 }
 
 .domo:first-child {
@@ -259,4 +280,184 @@ h3.domoAge {
 
 .domo:last-child {
     margin-bottom:10px;
+}
+
+
+/*--THEMES--*/
+
+/*--BLOCKS--*/
+.color { 
+  float: right;
+  height: 30px;
+  width: 30px;
+  margin: 0.5em;
+  border: 1px solid black;
+} 
+.color:hover{
+  box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.4);
+}
+
+/*--RED--*/
+.red nav, .red .formSubmit, .red .makeDomoSubmit{
+  background-color: #ff2a2a;
+  border-color: #ff2a2a;
+}
+.r{
+  background-color: #ff2a2a;
+}
+.red a:hover, .red nav a:hover{
+  transition: background-color 0.4s ease;
+  background-color: #ff5252;
+}
+.red .formSubmit:hover, .red .domoSubmit:hover {
+  transition: background-color 0.4s ease;
+  background-color: #de0000;
+}
+.red .domo, .red .domoForm{
+  background-color: #ff2a2a;
+  border-color: #de0000;
+}
+.red #domos{
+  border-color: #ff2a2a; 
+}
+.red #user:focus, .red #pass:focus, .red #pass2:focus{
+  box-shadow: 0px 0px 1px 1px #de0000;
+}
+.red .domo:hover{
+  border-color: rgba(255,255,255, 0.8);
+  transition: border-color 0.2s ease-out;
+  transition: background-color 2.6s ease-out;
+  background-color: #ff5252;
+}
+
+/*--BLUE--*/
+.blue nav, .blue .formSubmit, .blue .makeDomoSubmit{
+  background-color: #55acee;
+  border-color: #55acee;
+}
+.b{
+  background-color: #55acee;
+}
+.blue a:hover, .blue nav a:hover{
+  transition: background-color 0.4s ease;
+  background-color: #66bdff;
+}
+.blue .formSubmit:hover, .blue .domoSubmit:hover {
+  transition: background-color 0.4s ease;
+  background-color: #338acc;
+}
+.blue .domo, .blue .domoForm{
+  background-color: #55acee;
+  border-color: #338acc;
+}
+.blue #domos{
+  border-color: #55acee; 
+}
+.blue #user:focus, .blue #pass:focus, .blue #pass2:focus{
+  box-shadow: 0px 0px 1px 1px #338acc;
+}
+.blue .domo:hover{
+  border-color: rgba(255,255,255, 0.8);
+  transition: border-color 0.2s ease-out;
+  transition: background-color 2.6s ease-out;
+  background-color: #66bdff;
+}
+
+/*--ORANGE--*/
+.orange nav, .orange .formSubmit, .orange .makeDomoSubmit{
+  background-color: #eeb955;
+  border-color: #eeb955;
+}
+.o{
+  background-color: #eeb955;
+}
+.orange a:hover, .orange nav a:hover{
+  transition: background-color 0.4s ease;
+  background-color: #ffd966;
+}
+.orange .formSubmit:hover, .orange .domoSubmit:hover {
+  transition: background-color 0.4s ease;
+  background-color: #c97d12;
+}
+.orange .domo, .orange .domoForm{
+  background-color: #eeb955;
+  border-color: #c97d12;
+}
+.orange #domos{
+  border-color: #eeb955; 
+}
+.orange #user:focus, .orange #pass:focus, .orange #pass2:focus{
+  box-shadow: 0px 0px 1px 1px #c97d12;
+}
+.orange .domo:hover{
+  border-color: rgba(255,255,255, 0.8);
+  transition: border-color 0.2s ease-out;
+  transition: background-color 2.6s ease-out;
+  background-color: #ffd966;
+}
+
+/*--GREEN--*/
+.green nav, .green .formSubmit, .green .makeDomoSubmit{
+  background-color: #69ee55;
+  border-color: #69ee55;
+}
+.g{
+  background-color: #69ee55;
+}
+.green a:hover, .green nav a:hover{
+  transition: background-color 0.4s ease;
+  background-color: #95ff66;
+}
+.green .formSubmit:hover, .green .domoSubmit:hover {
+  transition: background-color 0.4s ease;
+  background-color: #43c912;
+}
+.green .domo, .green .domoForm{
+  background-color: #69ee55;
+  border-color: #43c912;
+}
+.green #domos{
+  border-color: #69ee55; 
+}
+.green #user:focus, .green #pass:focus, .green #pass2:focus{
+  box-shadow: 0px 0px 1px 1px #43c912;
+}
+.green .domo:hover{
+  border-color: rgba(255,255,255, 0.8);
+  transition: border-color 0.2s ease-out;
+  transition: background-color 2.6s ease-out;
+  background-color: #95ff66;
+}
+
+/*--PURPLE--*/
+.purple nav, .purple .formSubmit, .purple .makeDomoSubmit{
+  background-color: #aa55ee;
+  border-color: #aa55ee;
+}
+.p{
+  background-color: #aa55ee;
+}
+.purple a:hover, .purple nav a:hover{
+  transition: background-color 0.4s ease;
+  background-color: #b366ff;
+}
+.purple .formSubmit:hover, .purple .domoSubmit:hover {
+  transition: background-color 0.4s ease;
+  background-color: #9212c9;
+}
+.purple .domo, .purple .domoForm{
+  background-color: #aa55ee;
+  border-color: #9212c9;
+}
+.purple #domos{
+  border-color: #aa55ee; 
+}
+.purple #user:focus, .purple #pass:focus, .purple #pass2:focus{
+  box-shadow: 0px 0px 1px 1px #9212c9;
+}
+.purple .domo:hover{
+  border-color: rgba(255,255,255, 0.8);
+  transition: border-color 0.2s ease-out;
+  transition: background-color 2.6s ease-out;
+  background-color: #b366ff;
 }

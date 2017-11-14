@@ -115,4 +115,6 @@ const getToken = () => {
 
 $(document).ready(function() {
   getToken();
+  changeTheme(color);
+  connectButtons();
 });
